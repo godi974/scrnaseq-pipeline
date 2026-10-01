@@ -1,0 +1,10 @@
+name: scrnaseq-pipeline
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.12 
+  - scanpy
+  - jupyterlab 
+  - ipykernel
