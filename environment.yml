@@ -8,3 +8,4 @@ dependencies:
   - scanpy
   - jupyterlab 
   - ipykernel
+  - scikit-image
