@@ -1,2 +1,4 @@
 data/ 
 results/*.h5ad
+._*
+.DS_Store
