@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/scpipe/__init__.py
+src/scpipe/qc.py
+src/scpipe.egg-info/PKG-INFO
+src/scpipe.egg-info/SOURCES.txt
+src/scpipe.egg-info/dependency_links.txt
+src/scpipe.egg-info/top_level.txt

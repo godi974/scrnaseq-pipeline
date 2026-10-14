@@ -1,0 +1,12 @@
+[build-system] # tool used to install the package
+requires = ["setuptools>=61"] #   a list of packages that are needed to build the package.
+build-backend = "setuptools.build_meta" # Python object that frontends will use to perform the build.
+
+[project]
+name = "scpipe"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+
+[tool.setuptools.packages.find] 
+where = ["src"] # look for th epackah-ge in src\ 
