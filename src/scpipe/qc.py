@@ -5,7 +5,7 @@ from scipy.stats import median_abs_deviation
 import scanpy as sc
 
 def compute_qc_metrics(adata, mt_prefix = "MT-"):
-    adata.var['MT-'] = adata.var_names.str.startswith(mt_prefix) 
+    adata.var[mt_prefix] = adata.var_names.str.startswith(mt_prefix) 
     sc.pp.calculate_qc_metrics(adata, qc_vars=[mt_prefix], inplace= True )
 
 def is_outlier(adata,metric , n_mads,upper_only=False):
@@ -70,8 +70,9 @@ def filter_cells_and_genes(adata, qc_fail, min_cells=3):
         A filtered copy of adata.
     """
 
-    adata_clean = adata[~adata.obs["qc_fail"]].copy() 
-    return adata_clean 
+    adata_clean = adata[~qc_fail].copy()
+    sc.pp.filter_genes(adata_clean, min_cells=min_cells)
+    return adata_clean
     
 
 
